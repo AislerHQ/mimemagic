@@ -825,6 +825,8 @@ class MimeMagic
     'zip' => ['application/zip'],
     'zoo' => ['application/x-zoo'],
     'zsav' => ['application/x-spss-sav'],
+    'brd' => ['application/x-cadsoft-eagle-v5-board','application/x-cadsoft-eagle-xml-board'],
+    'sch' => ['application/x-cadsoft-eagle-v5-schematic','application/x-cadsoft-eagle-xml-schematic']
   }
   # @private
   # :nodoc:
@@ -1419,6 +1421,10 @@ class MimeMagic
     'video/x-sgi-movie' => [%w(movie), %w(), 'SGI video'],
     'video/x-theora+ogg' => [%w(ogg), %w(video/ogg), 'Ogg Theora video'],
     'x-epoc/x-sisx-app' => [%w(sisx), %w(), 'SISX package'],
+    'application/x-cadsoft-eagle-v5-board' => [%w(brd), %w(), 'CadSoft EAGLE v5 board drawing'],
+    'application/x-cadsoft-eagle-v5-schematic' => [%w(sch), %w(), 'CadSoft EAGLE v5 schematic drawing'],
+    'application/x-cadsoft-eagle-xml-board' => [%w(brd), %w(), 'CadSoft EAGLE XML board drawing'],
+    'application/x-cadsoft-eagle-xml-schematic' => [%w(sch), %w(), 'CadSoft EAGLE XML schematic drawing']
   }
   # @private
   # :nodoc:
@@ -1800,5 +1806,9 @@ class MimeMagic
     ['text/cache-manifest', [[0, 'CACHE MANIFEST', [[14, ' '], [14, "\t"], [14, "\n"], [14, "\r"]]]]],
     ['text/vnd.trolltech.linguist', [[0..256, '<TS']]],
     ['text/x-bibtex', [[0, '% This file was created with JabRef']]],
+    ['application/x-cadsoft-eagle-v5-board', [[0, "\020\200"]]],
+    ['application/x-cadsoft-eagle-v5-schematic', [[0, "\020\200"]]],
+    ['application/x-cadsoft-eagle-xml-board', [[40, '!DOCTYPE eagle SYSTEM']]],
+    ['application/x-cadsoft-eagle-xml-schematic', [[40, '!DOCTYPE eagle SYSTEM']]]
   ]
 end
